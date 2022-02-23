@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="This web site tells about Saiful Islam. A boy who wants to do something remarkable">
+    <meta name="keywords" content="Saiful Islam,Web developer">
+    <meta name="author" content="Saiful Islam">
+    <meta http-equiv="refresh" content="30">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saiful's Site</title>
+  </head>
+  <body style="background-color:#b8bdd1;">
+    <style>
+      *{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: montserrat;
+}
+nav{
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+section{
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+    </style>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">My Profile</label>
+      <ul>
+        <li><a class="active" href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+    <hr size="6">
+    <center>
+      <img src = "{{'https://avatars.githubusercontent.com/u/79145511?s=400&u=f0e2655893c5d571b879fecefb6a611a63ee2f47&v=4'}}" alt="Saiful's Profile Picture" style="width:150px;height:150px;">
+<h1>Hi! I am Siful Islam<h5>(সাইফুল ইসলাম)</h5></h1>
+<br>
+</center>
+<hr size="6">
+<center>
+<h2>Introduction</h2>
+<br>
+</center>
+<center>
+<h4>My name is Saiful Islam. I am a student of Daffodil International University.<br>Student of CSE department.
+<br>This website is my first
+practice site. I have started learning web development.<br>
+I have started learning web development. </h4>
+<hr size="4">
+<h3>Objective of Life</h3>
+<ul>
+  <li>Get bachelor degree
+<ul>
+  <li>Learn new things constantly</li>
+  <li>Develop my skills</li>
+  <li>Besides learning new things maintain University result</li>
+</ul>
+  </li>
+  <li>Seat for IELTS exam</li>
+  <li>Daily apply for scholarslhip</li>
+  <li>Look for job</li>
+  <li>Look for Internship foreign country</li>
+</ul>
+<hr size="4">
+<h3>My hobbies</h3>
+<ol>
+  <li>Watching movies and animes</li>
+  <li>Reading books</li>
+  <li>Roaming around with friends</li>
+  <li>Internet surfing</li>
+</ol>
+</center>
+  </body>
+</html>
