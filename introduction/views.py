@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from introduction.models import Contact
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -12,8 +14,13 @@ def contact(request):
         last_name = request.POST.get('last_name')
         country = request.POST.get('country')
         subject = request.POST.get('subject')
+        contact.name=name
+        contact.last_name=last_name
+        contact.country=country
+        contact.subject=subject
+        contact.save()
+        return HttpResponse("Thanks")
         
-
     return render(request,'contact.html')    
 def about(request):
     return render(request,'About.html')
